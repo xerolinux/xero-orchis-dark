@@ -173,8 +173,7 @@ echo "#######################"
 echo
 
 if cd ~ && git clone https://github.com/vinceliuice/Orchis-kde.git; then
-  sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
-  cd ~ && rm -Rf Orchis-kde/
+   cd ~ && rm -Rf Orchis-kde/
 else
   echo "Failed to clone Orchis-kde theme"
   exit 1
@@ -192,8 +191,44 @@ if [ ! -d "$HOME/.themes" ]; then
   echo "Created ~/.themes directory"
 fi
 
-cd ~ && git clone https://github.com/vinceliuice/Orchis-theme.git && cd Orchis-theme/ && sh install.sh -l -f -c dark --tweaks primary -d $HOME/.themes
-cd ~ && rm -Rf Orchis-theme/
+echo
+
+# Prompt user for theme choice
+echo "Choose your GTK Theme Variant :"
+echo
+echo "1) Default (Consistent)."
+echo "2) Pure Black dark variant."
+echo
+read -p "Enter your choice (1 or 2): " choice
+
+# Execute commands based on user choice
+case $choice in
+  1)
+    echo "Installing Default/Consistent GTK theme..."
+    echo
+    cd ~ && git clone https://github.com/vinceliuice/Orchis-theme.git
+    cd Orchis-theme/
+    sh install.sh -l -f -c dark --tweaks primary -d $HOME/.themes
+    sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+    cd ~ && rm -Rf Orchis-theme/
+    echo
+    echo "Standard/Consistent GTK theme installed successfully!"
+    ;;
+  2)
+    echo "Installing Absolute Black GTK theme..."
+    echo
+    cd ~ && git clone https://github.com/vinceliuice/Orchis-theme.git
+    cd Orchis-theme/
+    sh install.sh -l -f -c dark --tweaks black -d $HOME/.themes
+    sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+    cd ~ && rm -Rf Orchis-theme/
+    echo
+    echo "Absolute Black GTK theme installed successfully!"
+    ;;
+  *)
+    echo "Invalid choice. Please run the script again and select either 1 or 2."
+    ;;
+esac
 
 echo
 echo "Plz Reboot To Apply Settings..."
