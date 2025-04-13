@@ -163,7 +163,7 @@ echo "Applying Grub Theme...."
 echo "#######################"
 
 cd ~ && git clone https://github.com/yeyushengfan258/Matrix-grub-theme.git
-cd ~/Matrix-grub-theme/ && sudo ./install.sh -t window -s 2k -b
+cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p -b
 cd ~ && rm -rf Matrix-grub-theme/
 sleep 2
 echo
