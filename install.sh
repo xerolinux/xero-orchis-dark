@@ -161,9 +161,11 @@ echo
 
 echo "Applying Grub Theme...."
 echo "#######################"
-
+if [ -d "/boot/grub/themes/Matrices-sidebar/" ]; then
+    sudo rm -rf "/boot/grub/themes/Matrices-sidebar/"
+fi
 cd ~ && git clone https://github.com/yeyushengfan258/Matrix-grub-theme.git
-cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p -b
+cd ~/Matrix-grub-theme/ && sudo ./install.sh -t window -s 1080p -b
 cd ~ && rm -rf Matrix-grub-theme/
 sleep 2
 echo
