@@ -14,7 +14,7 @@ echo
 echo "Native Packages..."
 echo
 
-sudo pacman -S --noconfirm --needed imagemagick kvantum unzip jq xmlstarlet fastfetch gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd kde-wallpapers
+sudo pacman -S --noconfirm --needed imagemagick kvantum unzip jq xmlstarlet meld fastfetch gtk-engine-murrine gtk-engines ttf-hack-nerd ttf-fira-code kdeconnect ttf-terminus-nerd noto-fonts-emoji ttf-meslo-nerd
 
 echo
 
@@ -67,7 +67,7 @@ echo "Selected AUR helper: $aur_helper"
 echo
 
 # Install packages using the detected AUR helper
-$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k tela-circle-icon-theme-blue
+$aur_helper -S --noconfirm --needed ttf-meslo-nerd-font-powerlevel10k tela-circle-icon-theme-blue pacseek
 
 sleep 2
 echo
