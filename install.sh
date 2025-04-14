@@ -161,12 +161,24 @@ echo
 
 echo "Applying Grub Theme...."
 echo "#######################"
-if [ -d "/boot/grub/themes/Matrices-sidebar/" ]; then
-    sudo rm -rf "/boot/grub/themes/Matrices-sidebar/"
+
+# Check if GRUB is installed
+if [ -d "/boot/grub" ]; then
+    echo "GRUB detected. Proceeding with theme installation..."
+
+    # Check if the theme folder exists and remove it
+    if [ -d "/boot/grub/themes/Matrices-sidebar/" ]; then
+        sudo rm -rf "/boot/grub/themes/Matrices-sidebar/"
+    fi
+
+    # Clone the repository and install the theme
+    cd ~ && git clone https://github.com/yeyushengfan258/Matrix-grub-theme.git
+    cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p -b
+    cd ~ && rm -rf Matrix-grub-theme/
+else
+    echo "GRUB not detected. Skipping theme installation."
 fi
-cd ~ && git clone https://github.com/yeyushengfan258/Matrix-grub-theme.git
-cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p -b
-cd ~ && rm -rf Matrix-grub-theme/
+
 sleep 2
 echo
 
