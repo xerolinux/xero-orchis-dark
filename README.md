@@ -4,15 +4,9 @@
 
 **Install At Own Risk!!!**. As of now it supports Plasma 6.x.x. If you notice any issues and report them via issue tracker on here and I will do my best to address them. To apply the rice, please follow the commands posted below. You will need either Paru or Yay (installed via my toolkit). Keep in mind that this will replace some files.
 
-```Bash
-git clone https://github.com/xerolinux/xero-orchis-dark.git
-cd xero-orchis-dark/ && ./install.sh
-```
+# [.:: Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/)
 
 If you are *still* using the **Firefox** browser, there's a super dark theme that fits this rice nicely. You can find it at the link below, apply it and enjoy. Thanks to **@SMOKΞ** for suggestion. At **XeroLinux HQ** we value stability & consistency above all else ;)
-
-- Firefox Dark Black Theme :<br />
-https://addons.mozilla.org/en-US/firefox/addon/nicedarktheme/
 
 ![XeroOrchis](https://i.imgur.com/LhXPFrH.jpeg)
 
