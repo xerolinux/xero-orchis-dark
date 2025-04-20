@@ -187,6 +187,7 @@ echo "#######################"
 echo
 
 if cd ~ && git clone https://github.com/vinceliuice/Orchis-kde.git; then
+   cd ~/Orchis-kde/ && sh install.sh
    cd ~ && rm -Rf Orchis-kde/
 else
   echo "Failed to clone Orchis-kde theme"
@@ -232,7 +233,7 @@ case $choice in
     echo "Installing Absolute Black GTK theme..."
     echo
     cd ~ && git clone https://github.com/vinceliuice/Orchis-theme.git
-    cd Orchis-theme/
+    cd ~/Orchis-theme/
     sh install.sh -l -f -c dark --tweaks black -d $HOME/.themes
     sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
     cd ~ && rm -Rf Orchis-theme/
