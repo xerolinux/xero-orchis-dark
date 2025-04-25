@@ -6,11 +6,11 @@
 
 <div align="center">
 
-# [.:: Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/)
+# [.:: Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/) (click me)
 
 </div>
 
-If you are *still* using the **Firefox** browser, there's a super dark theme that fits this rice nicely. You can find it at the link below, apply it and enjoy. Thanks to **@SMOKΞ** for suggestion. At **XeroLinux HQ** we value stability & consistency above all else ;)
+Thanks to **@SMOKΞ** for suggestion. At **XeroLinux HQ** we value stability & consistency above all else ;)
 
 ![XeroOrchis](https://i.imgur.com/LhXPFrH.jpeg)
 
