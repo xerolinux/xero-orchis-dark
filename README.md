@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# [.:: Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/) (click me)
+# [.:: Click & Follow the Wiki ::.](https://wiki.xerolinux.xyz/rices/) 
 
 </div>
 
