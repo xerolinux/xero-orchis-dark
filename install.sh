@@ -173,7 +173,7 @@ if [ -d "/boot/grub" ]; then
 
     # Clone the repository and install the theme
     cd ~ && git clone https://github.com/yeyushengfan258/Matrix-grub-theme.git
-    cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p -b
+    cd ~/Matrix-grub-theme/ && sudo ./install.sh -t sidebar -s 1080p
     cd ~ && rm -rf Matrix-grub-theme/
 else
     echo "GRUB not detected. Skipping theme installation."
